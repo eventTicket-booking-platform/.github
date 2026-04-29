@@ -61,6 +61,29 @@ Additional supporting microservices may include authentication, notification, pa
 
 [Provide basic usage instructions]
 
+## CI/CD
+
+The project uses GitHub Actions for continuous integration and deployment. Each service repository has a dedicated workflow triggered on push to the main branch.
+
+### CI/CD Pipeline Overview
+
+![Common CI/CD Pipeline](../diagrams/Common%20CICD%20Pipeline%20for%20all%20services.png)
+
+The pipeline consists of the following stages:
+
+1. **Checkout Source**: Retrieves the latest code from the repository.
+2. **Build and Test**:
+   - For backend services: Maven build with JDK 17 and unit tests.
+   - For frontend services: Node.js dependency installation and build.
+3. **Quality Gate Scan**: SonarQube analysis to ensure code quality — failures block downstream stages.
+4. **GCP Authentication**: Authenticates with Google Cloud Platform and fetches GKE credentials.
+5. **Docker Hub Login**: Authenticates with Docker Hub for image registry access.
+6. **Build and Push Docker Image**: Creates Docker images tagged with 'latest' and short-SHA, then pushes to Docker Hub.
+7. **Rolling Update**: Uses `kubectl set image` to update the target Deployment in the event-hub namespace.
+8. **Rollout Status**: Confirms successful rollout using `kubectl rollout status` before pipeline completion.
+
+The pipeline ensures automated, reliable deployments to the GKE cluster while maintaining code quality standards.
+
 ## Diagrams
 
 All architectural and state diagrams are available in the `diagrams/` folder:
