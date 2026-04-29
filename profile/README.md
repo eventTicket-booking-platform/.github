@@ -10,11 +10,11 @@ The project utilizes a microservices architecture deployed on Google Kubernetes 
 
 ### Cloud Architecture
 
-![Cloud Architecture](<diagrams/Cloud%20Architecture%20(Kubernetes%20GKE).png>)
+![Cloud Architecture](<../diagrams/Cloud%20Architecture%20(Kubernetes%20GKE).png>)
 
 ### Messaging Architecture
 
-![Messaging Architecture](<diagrams/Messaging%20Architecture%20(RabbitMQ).png>)
+![Messaging Architecture](<../diagrams/Messaging%20Architecture%20(RabbitMQ).png>)
 
 ## Services
 
@@ -22,15 +22,15 @@ The system consists of several microservices, each handling specific business do
 
 1. **User Management Service**
    - Handles user registration, login, avatar setting, and password recovery
-   - ![User Management State Diagram](diagrams/State%20Diagram%20Login%20%20Register%20%20Set%20Avatar%20%20Forgot%20Password.png)
+   - ![User Management State Diagram](../diagrams/State%20Diagram%20Login%20%20Register%20%20Set%20Avatar%20%20Forgot%20Password.png)
 
 2. **Event Management Service**
    - Manages event creation and category setup
-   - ![Event Creation State Diagram](<diagrams/State%20Diagram(Create%20Category%20&%20Event%20Creation).png>)
+   - ![Event Creation State Diagram](<../diagrams/State%20Diagram(Create%20Category%20&%20Event%20Creation).png>)
 
 3. **Booking Service**
    - Handles event booking processes
-   - ![Booking State Diagram](<diagrams/State%20Diagram(Booking%20an%20Event).png>)
+   - ![Booking State Diagram](<../diagrams/State%20Diagram(Booking%20an%20Event).png>)
 
 Additional supporting microservices may include authentication, notification, payment processing, and logging services, depending on the full implementation.
 
@@ -71,7 +71,7 @@ All architectural and state diagrams are available in the `diagrams/` folder:
 - Event Management State Diagrams
 - Booking State Diagrams
 
-[View Diagrams](./diagrams/)
+[View Diagrams](../diagrams/)
 
 ## Reports
 
