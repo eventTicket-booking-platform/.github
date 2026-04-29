@@ -75,4 +75,4 @@ All architectural and state diagrams are available in the `diagrams/` folder:
 
 ## Reports
 
-For detailed project reports and documentation, refer to the [Project Report](./Report_Group35.pdf) (if available) or check the diagrams folder for visual documentation.
+For detailed project reports and documentation, refer to the [Project Report](../Report_Group35.pdf) (if available) or check the diagrams folder for visual documentation.
