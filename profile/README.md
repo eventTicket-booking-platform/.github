@@ -4,6 +4,8 @@
 
 This project is a cloud-based microservices architecture designed to manage and orchestrate a comprehensive event management system. It leverages modern cloud technologies to provide scalable, resilient, and efficient services for user authentication, event creation, booking, and category management. The system is built using microservices principles, allowing for independent deployment, scaling, and maintenance of individual components.
 
+For local and cloud setup instructions, refer to the [k8 repository](https://github.com/eventTicket-booking-platform/k8).
+
 ## Architecture
 
 The project utilizes a microservices architecture deployed on Google Kubernetes Engine (GKE) for container orchestration. Services communicate asynchronously using RabbitMQ as the message broker, ensuring loose coupling and high availability.
